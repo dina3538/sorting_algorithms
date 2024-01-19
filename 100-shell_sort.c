@@ -9,7 +9,8 @@
 void shell_sort(int *array, size_t size)
 {
 	size_t k;
-	size_t i;
+	size_t i, j;
+	int temp;
 
 	if (array == NULL || size < 2)
 		return;
@@ -23,8 +24,7 @@ void shell_sort(int *array, size_t size)
 	{
 		for (i = k; i < size; ++i)
 		{
-			int temp = array[i];
-			size_t j;
+			temp = array[i];
 
 			for (j = i; j >= k && array[j - k] > temp; j -= k)
 			{
