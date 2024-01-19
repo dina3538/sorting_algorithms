@@ -48,7 +48,7 @@ size_t _lemouto(int *array, size_t size, ssize_t less, ssize_t hig)
  * @hig: hig indx
  * Return: void
  */
- void _quick(int *array, size_t size, ssize_t less, ssize_t hig)
+void _quick(int *array, size_t size, ssize_t less, ssize_t hig)
 {
 	if (less < hig)
 	{
