@@ -28,7 +28,7 @@ void _swap(int *array, size_t size, int *x, int *y)
  * @hig: hig index
  * Return: size_t
  */
-void _lemouto(int *array, size_t size, ssize_t less, ssize_t hig)
+size_t _lemouto(int *array, size_t size, ssize_t less, ssize_t hig)
 {
 	int x, y, piv = array[hig];
 
