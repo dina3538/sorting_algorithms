@@ -1,7 +1,6 @@
 #include "sort.h"
 #include <stdio.h>
 #include <stdlib.h>
-
 /**
  * counting_ - Performs counting sort for a specific digit (exp)
  * @array: The array to be sorted
@@ -38,7 +37,7 @@ void counting_(int *array, size_t size, int exp)
 	for (i = 1; i < radix; i++)
 		count[i] += count[i - 1];
 
-	for (j = size - 1; j > 0; j--)
+	for (j = size - 1; j < size; j--)
 	{
 		output[count[(array[j] / exp) % radix] - 1] = array[j];
 		count[(array[j] / exp) % radix]--;
@@ -47,10 +46,9 @@ void counting_(int *array, size_t size, int exp)
 	for (j = 0; j < size; j++)
 		array[j] = output[j];
 
-	print_array(array, size);
 
 	free(output);
-	free(count);
+	free(count);	
 }
 
 /**
