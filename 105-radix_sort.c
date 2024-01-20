@@ -11,10 +11,8 @@
 
 void counting_(int *array, size_t size, int exp)
 {
-	int *count;
-	int i;
+	int *count, i;
 	size_t j;
-	ssize_t k;
 	const int radix = 10;
 	int *output = malloc(sizeof(int) * size);
 
@@ -40,11 +38,10 @@ void counting_(int *array, size_t size, int exp)
 	for (i = 1; i < radix; i++)
 		count[i] += count[i - 1];
 
-
-	for (k = size - 1; k >= 0; k--)
+	for (j = size - 1; j > 0; j--)
 	{
-		output[count[(array[k] / exp) % radix] - 1] = array[k];
-		count[(array[k] / exp) % radix]--;
+		output[count[(array[j] / exp) % radix] - 1] = array[j];
+		count[(array[j] / exp) % radix]--;
 	}
 
 	for (j = 0; j < size; j++)
