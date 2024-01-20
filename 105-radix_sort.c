@@ -43,7 +43,7 @@ void counting_(int *array, size_t size, int exp)
 		count[(array[j] / exp) % radix]--;
 	}
 	for (j = 0; j < size; j++)
-		array[j] = output[j];
+		array[j] = out[j];
 
 	free(out);
 	free(count);
