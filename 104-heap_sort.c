@@ -33,7 +33,7 @@ void _siftdown(int *array, size_t begin, size_t end, size_t size)
 {
 	size_t home = begin, _swap, child;
 
-	while(leftchild(home) <= end)
+	while (leftchild(home) <= end)
 	{
 		child = leftchild(home);
 		_swap = home;
@@ -50,7 +50,7 @@ void _siftdown(int *array, size_t begin, size_t end, size_t size)
 }
 
 /**
- * join - put the heap 
+ * join - put the heap
  * @array: array of ints
  * @size: the size
  */
