@@ -57,7 +57,7 @@ void _siftdown(int *array, size_t begin, size_t end, size_t size)
 
 void join(int *array, size_t size)
 {
-	size_t begin;
+	ssize_t begin;
 
 	begin = father(size - 1);
 	while (begin >= 0)
